@@ -1,0 +1,136 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-bg);
+    position: sticky;
+    top: 0;
+    padding: 1rem 2rem;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 90px;
+}
+
+.navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin: 0 1rem;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 500;
+}
+
+.navbar-links li:hover {
+    color: var(--color-bg-variant);
+}
+
+.navbar-login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: large;
+    font-weight: 500;
+}
+
+.navbar-login a {
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.navbar-login a:hover {
+    border-bottom: 2px solid var(--color-bg-variant);
+}
+
+.navbar-login div {
+    width: 1px;
+    height: 30px;
+    background: var(--color-grey);
+}
+
+.navbar-smallscreen {
+    display: none;
+    cursor: pointer;
+    text-align: left;
+    
+}
+
+.navbar-smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-bg);
+    transition: .25s ease;
+    flex-direction: column;
+    z-index: 5;
+    font-size: large;
+    font-weight: 500;
+}
+
+.navbar-smallscreen_overlay .overlay__close {
+    font-size: 27px;
+    color: var(--color-bg);
+    cursor:pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar-smallscreen_links {
+    list-style: none;
+    
+}
+
+.navbar-smallscreen_links li {
+    margin: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+
+.navbar-smallscreen_links li:hover {
+    color: var(--color-bg-variant);
+}
+
+
+
+@media screen and (max-width: 1150px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-smallscreen {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbar-login {
+        display: none;
+    }
+
+    .navbar-logo img {
+        width: 100px;
+    }
+}

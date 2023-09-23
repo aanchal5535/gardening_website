@@ -1,0 +1,48 @@
+
+.faq{
+    margin: 0 5%;
+    padding: 5px;
+    margin-bottom: 60px;
+     border-radius: 32px;
+    background: radial-gradient(#fff, #66FFCC);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+    margin: 20px;
+    padding: 5px;
+}
+
+.accordion {
+    margin: 0  20% ;
+    border: 1px solid #000;
+    margin-bottom: 5px;
+  }
+  
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f5f5f5;
+  }
+  
+  .accordion-title {
+    margin: 0;
+  }
+  
+  .accordion-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .accordion-icon.open {
+    transform: rotate(90deg);
+  }
+  
+  .accordion-content {
+    padding: 10px;
+  }

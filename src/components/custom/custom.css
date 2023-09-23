@@ -1,0 +1,22 @@
+
+.custom{
+    margin: 0  20% ;
+}
+.banner{
+    padding: 5px;
+    margin-bottom: 60px;
+     border-radius: 32px;
+    background: radial-gradient(#fff, #66FFCC);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content{
+    line-height: 2.5rem;
+    text-align: center;
+     width: 100%;
+     padding: 40px;
+   
+}
+.btn{
+    margin: 10px;
+}

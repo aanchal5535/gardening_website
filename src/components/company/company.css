@@ -1,0 +1,39 @@
+.company-container{
+   margin: 2rem;
+   padding:50px;
+   
+}
+.topic{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+    margin: 20px;
+    padding: 5px;
+}
+.brands{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.brand-name{
+    align-items: center;
+}
+.brand-name img{
+    width: 100%;
+    cursor: pointer;
+    filter:grayscale(100%);
+}
+.brand-name img:hover{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(0);
+}
+@media screen and (max-width: 1150px) {
+   
+    
+}
+
+@media screen and (max-width: 650px) {
+   
+}
