@@ -21,11 +21,11 @@ const data=[
     },
 ];
 
-const Faq = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Faq = () => {
+  const [openAccordion, setOpenAccordion] = useState(null);
 
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+  const toggleAccordion = (index) => {
+    setOpenAccordion(openAccordion === index ? null : index);
   };
 
   return (
@@ -35,12 +35,12 @@ const Faq = ({ question, answer }) => {
         {
     data.map(({question,answer},index)=>{
         return(
-            <div className="accordion">
-      <div className="accordion-header" onClick={toggleAccordion}>
+            <div className="accordion" key={index}>
+      <div className="accordion-header" onClick={toggleAccordion(index)}>
         <h3 className="accordion-title">{question}</h3>
-        <span className={`accordion-icon ${isOpen ? 'open' : ''}`}>&#x25B6;</span>
+        <span className={`accordion-icon ${openAccordion === index ? 'open' : ''}`}> &#x25B6;</span>
       </div>
-      {isOpen && (
+      {openAccordion === index && (
         <div className="accordion-content">
           <p>{answer}</p>
         </div>

@@ -8,17 +8,18 @@ import ME from '../../assests/logo.jpg';
 
 const Navbar = () => {
   const [toggleMenu,setToggleMenu]=React.useState(false);
+  const [activeNav, setActiveNav]=useState('#')
 return(
   <nav className='navbar'>
     <div className="navbar-logo">
-      <img src={ME} alt="app logo" />
+    <a href="#" onClick={()=>setActiveNav('#')}><img src={ME} alt="app logo" /></a>
     </div>
     <ul className='navbar-links'>
-      <li className='p__opensans'><a href="#home">Home</a> </li>
-      <li className='p__opensans'><a href="#services">Services</a> </li>
-      <li className='p__opensans'><a href="#blog">Blog</a> </li>
-      <li className='p__opensans'><a href="#contact">Contact</a> </li>
-      <li className='p__opensans'><a href="#profile"> Profile</a> </li>
+      <li className='p__opensans'><a href='#' onClick={()=>setActiveNav('#')}  className={activeNav==='#' ? 'active':''}>Home</a></li>
+      <li className='p__opensans'><a href='#' onClick={()=>setActiveNav('#')}  className={activeNav==='#' ? 'active':''}>Service</a></li>
+      <li className='p__opensans'><a href='#' onClick={()=>setActiveNav('#')}  className={activeNav==='#' ? 'active':''}>Blog</a></li>
+      <li className='p__opensans'><a href='#' onClick={()=>setActiveNav('#')}  className={activeNav==='#' ? 'active':''}>Services</a></li>
+      <li className='p__opensans'><a href='#' onClick={()=>setActiveNav('#')}  className={activeNav==='#' ? 'active':''}>Profile</a></li>
       
     </ul>
     <div className='navbar-login'>
